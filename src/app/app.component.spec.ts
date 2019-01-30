@@ -25,6 +25,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('detektor');
   });
+ 
 
   it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);

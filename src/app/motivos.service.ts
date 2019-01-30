@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MotivosService {
 
-  URL = "http://localhost/api/";
+  URL = "http://localhost/php_prueba/";
 
   constructor(private http: HttpClient) { }
 

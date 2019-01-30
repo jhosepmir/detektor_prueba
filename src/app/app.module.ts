@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MotivosService } from './motivos.service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,6 +19,7 @@ import { MotivosService } from './motivos.service';
     BrowserModule,
     FormsModule,
     HttpClientModule
+
   ],
   providers: [
     MotivosService
