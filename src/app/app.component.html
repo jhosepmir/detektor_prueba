@@ -1,0 +1,37 @@
+<div align="center">
+  <h1>MOTIVOS</h1>
+  <table border="1" *ngIf="hayRegistros(); else sin">
+    <tr>
+      <td>ID MOTIVO</td>
+      <td>DESCRIPCION</td>
+      <td>ESTADO</td>
+      <td>TIPO</td>
+      <td>BORRAR</td>
+      <td>SELECCIONAR</td>
+    </tr>
+    <tr *ngFor="let motivos of motivoss">
+      <td> {{motivos.motivo }} </td>
+      <td> {{motivos.des_motivo }} </td>
+      <td> {{motivos.estado }} </td>
+      <td> {{motivos.tipo }} </td>
+      <td> <button (click)="delectMotivo(motivos.motivo)"> Borrar </button> </td>
+      <td> <button (click)="selecMotivo(motivos.motivo)"> Seleccionar </button> </td>
+    </tr>
+  </table>
+
+  <ng-template #sin>
+    <p>No hay usuarios registrados.</p>
+  </ng-template>
+
+  <div>
+    
+    <p> Descripcion: <input type="text" [(ngModel)]="motivos.des_motivo" /> </p>
+    <p> Estado: <input type="text" [(ngModel)]="motivos.estado" /> </p>
+    <p> Tipo: <input type="text" [(ngModel)]="motivos.tipo" /> </p>
+    <p> 
+      <button (click)="addMotivo()"> AGREGAR </button> 
+      <button (click)="updateMotivo()"> MODIFICAR </button> 
+    </p>
+  </div>
+
+</div>
